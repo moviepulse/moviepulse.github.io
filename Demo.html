@@ -133,8 +133,7 @@
 <body>
 <div class="center">
 	
-
-<div id="Tabs_movie">
+    <div id="Tabs_movie">
 	<div class='container'>
 		<div class='image'><img src='images/movie.png' width='50' /></div>
 		<div class='text' align='center'><h2><font color='#00b4d8'>Movie</font><font color='#fb6f92'>Pulse</font>: Feeling the Pulse in Cinema - AI-Powered Emotion Forecasting for Box Office Prediction &nbsp;</h2></div>
@@ -147,8 +146,7 @@
 	</ul>
 	
 	<div id="result_all" >
-			<div style ="text-align:center;"><h5><label class='label info'>This App is designed to assist you in selecting the ideal poster from the two uploaded ones to maximize your box office performance.</h5>
-			</div>
+		<div style ="text-align:center;"><h5><label class='label info'>This App is designed to assist you in selecting the ideal poster from the two uploaded ones to maximize your box office performance.</h5></div>
 		
 		<form action="/" method="post" enctype="multipart/form-data">
 			<div class='formfield'>
@@ -167,16 +165,12 @@
 			<input type="file" name="input_image2" disabled="true">
 
 			</p>
-
-			
-			
 		</form>
-			<button type="submit" id="ShowResult" class='button', style='vertical-align:middle'><span>SELECT</span></button><br>
-			<!-- <button id="reloadButton">Refresh Page</button> -->
+			
+		<button type="submit" id="ShowResult" class='button', style='vertical-align:middle'><span>SELECT</span></button><br>
 
-			<div id="results_tab1">
+		<div id="results_tab1">
 			<hr class='double'>
-
 			<div style ="text-align:center;"><h3><label class='label info'>Selection Report</label></h3></p>
 			<h5>Based on our model's prediction, it is recommended that pairing your synopsis with <u>Poster 2</u> can enhance the box office performance. Please click the 'Poster Emotion' tab to view the poster emotions.</h5>
 			</div>
@@ -195,48 +189,46 @@
 					</tr>
 				</tbody>
 			</table>
-			</div>
+		</div>
 
 	</div>
 	
 	<div id="result_posters">
 		<div id="results_tab2">
-		<table border="1" align='center'>
-			<thead>
-				<tr>
-					<th id="poster1">Poster 1</th>
-					<th id="poster2">Poster 2</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><img src="bar_chart1.png" ></td>
-					<td><img src="bar_chart2.png" ></td>
-				</tr>
-			</tbody>
-		</table>
+			<table border="1" align='center'>
+				<thead>
+					<tr>
+						<th id="poster1">Poster 1</th>
+						<th id="poster2">Poster 2</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><img src="bar_chart1.png" ></td>
+						<td><img src="bar_chart2.png" ></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
-	
-
-	
-</div>	
+	    
+    </div>	
 </div>	
 </body>
-	<script>
+    <script>
 	$("#Tabs_movie").tabs({
-					heightStyle: "content"
-					});
+		heightStyle: "content"
+	});
 	
 	$(document).ready(function() {
             $('#ShowResult').click(function() {
                 $('#results_tab1').toggle();
-				$('#results_tab2').toggle();
+		$('#results_tab2').toggle();
             });
 			
-			$('#reloadButton').click(function() {
+	    $('#reloadButton').click(function() {
                 location.reload(true);
             });
         });
-	</script>
+    </script>
 </html>
