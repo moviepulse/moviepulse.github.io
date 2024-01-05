@@ -8,30 +8,6 @@
 	<script src="jquery-1.10.2.js"></script>
 	<script src="jquery-ui.js"></script>
     <title>Poster Analyzer App</title>
-	<style>
-		{% if Selected_poster==1  %}
-        #poster1 {
-            background-color: yellow;
-        }
-
-		{% else %}
-        
-		#poster2 {
-            background-color: yellow;
-        }
-		
-		{% endif %}
-		
-		
-		#IF_1
-		{
-			position: relative;
-			overflow: auto;
-			height: 1500px;
-			width: 100%; 
-
-		}
-    </style>
 
     <style>
 	.button {
@@ -75,7 +51,7 @@
 	}
 	</style>
 
-    <style>
+    	<style>
 		.center {
   			margin: auto;
 		  	width: 60%;
@@ -86,7 +62,7 @@
 	</style>
 
 	<style>
-    	.formfield {
+    		.formfield {
   			display: flex;
   			align-items: center;
 		}
@@ -203,59 +179,8 @@
 				<button type="submit" class='button', style='vertical-align:middle'><span>SELECT</span></button><br>
 				
 			</form>
-				<!-- <button id="reloadButton">Refresh Page</button> -->
 
-			{% if result %}
-				<hr class='double'>
-				<div style ="text-align:center;"><h3><label class='label info'>Selection Report</label></h3></p>
-				<h5>
-				Based on our model's prediction, it is recommended that pairing your synopsis with <u>Poster 
-				
-				{% if Selected_poster==1  %}
-					1
-				{% else %}
-					2
-				{% endif %}
-				
-				</u>can enhance the box office performance. Please click the 'Poster Emotion' tab to view the poster emotions.</h5>
-				</div>
-				
-				<!-- <p>{{ result }}</p> -->
-				<table border="1" align='center'>
-					<thead>
-						<tr>
-							<th id="poster1">Poster 1</th>
-							<th id="poster2">Poster 2</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td width="300px" align="center"><img width="300px" src="{{ img1_dat }}" ></td>
-							<td width="300px" align="center"><img width="300px" src="{{ img2_dat }}" ></td>
-						</tr>
-					</tbody>
-				</table>
 
-			{% endif %}
-		</div>
-		
-		<div id="result_posters">
-		{% if result %}
-			<table border="1" align='center'>
-				<thead>
-					<tr>
-						<th id="poster1">Poster 1</th>
-						<th id="poster2">Poster 2</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><img src="static/bar_chart1.png" ></td>
-						<td><img src="static/bar_chart2.png" ></td>
-					</tr>
-				</tbody>
-			</table>
-		{% endif %}
 		</div>
 		
 	</div>	
