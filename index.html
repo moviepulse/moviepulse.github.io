@@ -51,7 +51,7 @@
 	}
 	</style>
 
-    	<style>
+    <style>
 		.center {
   			margin: auto;
 		  	width: 60%;
@@ -62,7 +62,7 @@
 	</style>
 
 	<style>
-    		.formfield {
+    	.formfield {
   			display: flex;
   			align-items: center;
 		}
@@ -132,20 +132,18 @@
 
 <div id="Tabs_movie_upper">
 	<ul>
-		<li><a href="#Tabs_movie"><span>Real App</span></a></li>
-		<li><a href="#Demo_tabs">
-			<span>
+			<li><a href="#Tabs_movie"><span>Real App</span></a></li>
+			<li><a href="#Demo_tabs">
+				<span>
 					<div class="hoverable">
   						<span class="hoverable__main">Demo</span>
   						<span class="hoverable__tooltip"><h6> This demo comes with one pre-set synopsis and two uploaded posters.<br/> You can just simply click the <font color='#ef233c'>'SELECT'</font> button to view the results (as well<br/> as the Poster Emotion tab). </h6></span>
 					</div>
 				</span>
-			
-			</a>
-		</li>	
-		
+				</a>
+			</li>
 	</ul>
-			
+
 
 	<div id="Tabs_movie">
 		
@@ -155,7 +153,9 @@
 		</ul>
 		
 		<div id="result_all" >
-			<div style ="text-align:center;"><h5>This App is designed to assist you in selecting the ideal poster from the two uploaded ones to maximize your box office performance.</h5></div>
+			<div style ="text-align:center;"><h3><label class='label info'>Movie Box Offcie Understanding App</label></h3></p>
+			<h5>This App is designed to assist you in selecting the ideal poster from the two uploaded ones to maximize your box office performance.</h5>
+			</div>
 
 		</p>
 			<form action="/" method="post" enctype="multipart/form-data">
@@ -179,14 +179,65 @@
 				<button type="submit" class='button', style='vertical-align:middle'><span>SELECT</span></button><br>
 				
 			</form>
+				<!-- <button id="reloadButton">Refresh Page</button> -->
 
+			{% if result %}
+				<hr class='double'>
+				<div style ="text-align:center;"><h3><label class='label info'>Selection Report</label></h3></p>
+				<h5>
+				Based on our model's prediction, it is recommended that pairing your synopsis with <u>Poster 
+				
+				{% if Selected_poster==1  %}
+					1
+				{% else %}
+					2
+				{% endif %}
+				
+				</u>can enhance the box office performance. Please click the 'Poster Emotion' tab to view the poster emotions.</h5>
+				</div>
+				
+				<!-- <p>{{ result }}</p> -->
+				<table border="1" align='center'>
+					<thead>
+						<tr>
+							<th id="poster1">Poster 1</th>
+							<th id="poster2">Poster 2</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td width="300px" align="center"><img width="300px" src="{{ img1_dat }}" ></td>
+							<td width="300px" align="center"><img width="300px" src="{{ img2_dat }}" ></td>
+						</tr>
+					</tbody>
+				</table>
 
+			{% endif %}
+		</div>
+		
+		<div id="result_posters">
+		{% if result %}
+			<table border="1" align='center'>
+				<thead>
+					<tr>
+						<th id="poster1">Poster 1</th>
+						<th id="poster2">Poster 2</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><img src="static/bar_chart1.png" ></td>
+						<td><img src="static/bar_chart2.png" ></td>
+					</tr>
+				</tbody>
+			</table>
+		{% endif %}
 		</div>
 		
 	</div>	
 	
 	<div id="Demo_tabs">
-		<iframe id="IF_1" src="Demo.html" frameborder="0"></iframe>		
+		<iframe id="IF_1" src="./static/Demo/Demo.html" frameborder="0"></iframe>		
 	</div>
 </div>	
 
