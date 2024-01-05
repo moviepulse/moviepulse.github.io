@@ -7,7 +7,7 @@
 
 >[!NOTE]
 > Download the entire website folder and put it on your local computer.<br>
-> Due to the size limit, the saved model is included in the zip file on the shared drive.<br>
+> Due to the size limit, the saved model is included in the [shared drive](https://drive.google.com/file/d/1cKxYXUyXzve-BlB1VXocEOEAQU0ePBxz).<br>
 > You can also download it from [here](https://drive.google.com/file/d/13ABwzHWUnYXIHLK0jgykN9vMlzhD4ogW).
 
 
