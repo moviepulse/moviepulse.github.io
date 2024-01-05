@@ -6,7 +6,7 @@
 ### Instructions for installation and run this web-based application
 
 >[!NOTE]
-> Download the entire folder and put it on your local computer
+> Download the entire folder and put it on your local computer.
 > You can also download it from [here](https://drive.google.com/file/d/13ABwzHWUnYXIHLK0jgykN9vMlzhD4ogW).
 
 
@@ -35,7 +35,8 @@ $ pip install tensorflow, keras, scikit-learn, keras_retinanet, requests
 ```
 $ python app.py
 ```
-After running this command, you should be able to see the following message in the terminal:
+
+> After running this command, you should be able to see the following message in the terminal:
 ```
 * Serving Flask app 'app'
  * Debug mode: on
