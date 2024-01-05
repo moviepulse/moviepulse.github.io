@@ -3,7 +3,7 @@
 > [!TIP]
 > [Demo page](https://moviepulse.github.io/): https://moviepulse.github.io 
 
-### Instructions for installation and run this web-based application
+### Instructions for installation and run this web-based APP
 
 >[!NOTE]
 > Download the entire website folder and put it on your local computer.<br>
