@@ -1,4 +1,4 @@
-## <table cellspacing="0" cellpadding="0"><tr><td><p align="center"><img src="/images/movie.png" width="40"></td><td align='center'>MoviePulse: Feeling the Pulse in Cinema - AI-Powered Emotion Forecasting for Box Office Prediction</td><td><img src="/images/pulse.png" width="30"></p></td></tr></table>
+## <table cellspacing="0" cellpadding="0"><tr><td><p align="center"><img src="/images/movie.png" width="50"></td><td align='center'>MoviePulse: Feeling the Pulse in Cinema - AI-Powered Emotion Forecasting for Box Office Prediction</td><td><img src="/images/pulse.png" width="50"></p></td></tr></table>
 
 > [!TIP]
 > [Demo page](https://moviepulse.github.io/): https://moviepulse.github.io 
