@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="jquery-ui.css">
-	<script src="jquery-1.10.2.js"></script>
-	<script src="jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <title>Poster Analyzer App</title>
 	<style>
 	
@@ -61,16 +61,6 @@
 	}
 	</style>
 
-	<style>
-		.center {
-  			margin: auto;
-		  	width: 60%;
-		  	border: 0px solid #73AD21;
-		  	padding: 10px;
-		  	background-color: #caf0f8;
-		}
-	</style>
-
     <style>
     	.formfield {
   			display: flex;
@@ -105,44 +95,47 @@
 </head>
 <body>
 
-<div class='center'>
-	<div id="Tabs_movie">
-		<ul>
-			<li><a href="#result_all"><span>Ideal Poster Selection</span></a></li>
-			<li><a href="#result_posters"><span>Poster Emotion</span></a></li>
-		</ul>
+
+<div id="Tabs_movie">
+	<ul>
+		<li><a href="#result_all"><span>Ideal Poster Selection</span></a></li>
+		<li><a href="#result_posters"><span>Poster Emotion</span></a></li>
+	</ul>
 	
-		<div id="result_all" >
+	<div id="result_all" >
 			<div style ="text-align:center;"><h3><label class='label info'>Movie Box Offcie Understanding App</label></h3></p>
 			<h5>This App is designed to assist you in selecting the ideal poster from the two uploaded ones to maximize your box office performance.</h5>
 			</div>
 		
-			<form action="/" method="post" enctype="multipart/form-data">
-				<div class='formfield'>
-				<label for="input_text" class='label success'>Synopsis:</label>
-				<textarea name="input_text" rows="10" cols="100" placeholder="Having failed to defeat Aquaman the first time, Black Manta, still driven by the need to avenge his father's death, will stop at nothing to take Aquaman down once and for all. This time Black Manta is more formidable than ever before, wielding the power of the mythic Black Trident, which unleashes an ancient and malevolent force. To defeat him, Aquaman will turn to his imprisoned brother Orm, the former King of Atlantis, to forge an unlikely alliance. Together, they must set aside their differences in order to protect their kingdom and save Aquaman's family, and the world, from irreversible destruction." required></textarea>
-				</div>
-	
-				</p>
-	
-				<label for="input_image1" class='label success'>Poster 1:</label>
-				<input type="file" name="input_image1" disabled="true">
-	
-				</p>
-				
-				<label for="input_image2" class='label success'>Poster 2:</label>
-				<input type="file" name="input_image2" disabled="true">
-	
-				</p>
-			</form>
+		<form action="/" method="post" enctype="multipart/form-data">
+			<div class='formfield'>
+			<label for="input_text" class='label success'>Synopsis:</label>
+			<textarea name="input_text" rows="10" cols="100" placeholder="Having failed to defeat Aquaman the first time, Black Manta, still driven by the need to avenge his father's death, will stop at nothing to take Aquaman down once and for all. This time Black Manta is more formidable than ever before, wielding the power of the mythic Black Trident, which unleashes an ancient and malevolent force. To defeat him, Aquaman will turn to his imprisoned brother Orm, the former King of Atlantis, to forge an unlikely alliance. Together, they must set aside their differences in order to protect their kingdom and save Aquaman's family, and the world, from irreversible destruction." required></textarea>
+			</div>
+
+			</p>
+
+			<label for="input_image1" class='label success'>Poster 1:</label>
+			<input type="file" name="input_image1" disabled="true">
+
+			</p>
 			
+			<label for="input_image2" class='label success'>Poster 2:</label>
+			<input type="file" name="input_image2" disabled="true">
+
+			</p>
+
+			
+			
+		</form>
 			<button type="submit" id="ShowResult" class='button', style='vertical-align:middle'><span>SELECT</span></button><br>
+			<!-- <button id="reloadButton">Refresh Page</button> -->
 
 			<div id="results_tab1">
-				
-				<hr class='double'>
-				<div style ="text-align:center;"><h3><label class='label info'>Selection Report</label></h3></p>
-				<h5>Based on our model's prediction, it is recommended that pairing your synopsis with <u>Poster 2</u> can enhance the box office performance. Please click the 'Poster Emotion' tab to view the poster emotions.</h5>
+			<hr class='double'>
+
+			<div style ="text-align:center;"><h3><label class='label info'>Selection Report</label></h3></p>
+			<h5>Based on our model's prediction, it is recommended that pairing your synopsis with <u>Poster 2</u> can enhance the box office performance. Please click the 'Poster Emotion' tab to view the poster emotions.</h5>
 			</div>
 	
 			<table border="1" align='center'>
@@ -154,32 +147,36 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td width="300px" align="center"><img width="200px" src="images/poster1-test.jpeg" ></td>
-						<td width="300px" align="center"><img width="200px" src="images/poster2-test.jpeg" ></td>
+						<td width="300px" align="center"><img width="300px" src="Poster1.jpg" ></td>
+						<td width="300px" align="center"><img width="300px" src="Poster2.jpg" ></td>
 					</tr>
 				</tbody>
 			</table>
-		</div>
+			</div>
+
 	</div>
 	
 	<div id="result_posters">
 		<div id="results_tab2">
-			<table border="1" align='center'>
-				<thead>
-					<tr>
-						<th id="poster1">Poster 1</th>
-						<th id="poster2">Poster 2</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><img src="images/bar_chart1.png" ></td>
-						<td><img src="images/bar_chart2.png" ></td>
-					</tr>
-				</tbody>
-			</table>
+		<table border="1" align='center'>
+			<thead>
+				<tr>
+					<th id="poster1">Poster 1</th>
+					<th id="poster2">Poster 2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><img src="bar_chart1.png" ></td>
+					<td><img src="bar_chart2.png" ></td>
+				</tr>
+			</tbody>
+		</table>
 		</div>
-	</div>	
+	</div>
+	
+
+	
 </div>	
 	
 </body>
