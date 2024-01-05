@@ -10,7 +10,7 @@ from numpy import dot
 from numpy.linalg import norm
 from ast import literal_eval
 
-api_key = "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"
+api_key = "### PLACE YOUR GPT API KEY HERE"
 
 #prompt
 prompt_base ="Eight different emotions exist, including Amusement, Anger, Awe, Contentment, Disgust, Excitement, Fear, and Sadness. I want to examinine what emotions above are included in a synopsis. Can you judge the synopsis by distributing a total of 100 points to each of the emotions? Please just give me scores for each emotion without explanation and use commas to separate each score. The synopsis is "
