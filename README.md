@@ -6,7 +6,8 @@
 ### Instructions for installation and run this web-based application
 
 >[!NOTE]
-> Download the entire folder and put it on your local computer.
+> Download the entire website folder and put it on your local computer.<br>
+> Due to the size limit, the saved model is included in the zip file on the shared drive.<br>
 > You can also download it from [here](https://drive.google.com/file/d/13ABwzHWUnYXIHLK0jgykN9vMlzhD4ogW).
 
 
