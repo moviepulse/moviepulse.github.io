@@ -36,6 +36,9 @@ $ pip install tensorflow, keras, scikit-learn, keras_retinanet, requests
 ```
 $ python app.py
 ```
+> [!WARNING] 
+> <b>Before run this Python file, please use your own GPT API key on line 13</b>
+
 
 > After running this command, you should be able to see the following message in the terminal:
 ```
