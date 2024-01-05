@@ -9,15 +9,9 @@
 	<script src="jquery-ui.js"></script>
     <title>Poster Analyzer App</title>
 	<style>
-	
-        #poster2 {
-            background-color: yellow;
-        }
-		
-		#results_tab1, #results_tab2 {
-            display: none;
-        }
-    </style>
+	    #poster2 {background-color: yellow;}
+	    #results_tab1, #results_tab2 {display: none;}
+    	</style>
 
     <style>
 	.button {
@@ -34,14 +28,12 @@
 	  cursor: pointer;
 	  margin: 5px;
 	}
-
 	.button span {
 	  cursor: pointer;
 	  display: inline-block;
 	  position: relative;
 	  transition: 0.5s;
 	}
-
 	.button span:after {
 	  content: '\00bb';
 	  position: absolute;
@@ -50,49 +42,36 @@
 	  right: -20px;
 	  transition: 0.5s;
 	}
-
 	.button:hover span {
 	  padding-right: 25px;
 	}
-
 	.button:hover span:after {
 	  opacity: 1;
 	  right: 0;
 	}
-	</style>
 
-    <style>
     	.formfield {
-  			display: flex;
-  			align-items: center;
-		}
+  		display: flex;
+  		align-items: center;
+	}
+
+	.label {
+  		color: white;
+  		padding: 8px;
+	}
+
+	.success {background-color: #f07167;} /* Green */
+	.info {background-color: #2196F3;} /* Blue */
+	.red {background-color: : #ef233c} /* Red */
+	.warning {background-color: #ff9800;} /* Orange */
+
+	hr.double {
+  		border-top: 3px double;
+  		border-bottom: none;
+	}
     </style>
-
-    <style>
-    	.formfield {
-  			display: flex;
-  			align-items: center;
-		}
-
-		.label {
-  			color: white;
-  			padding: 8px;
-		}
-
-		.success {background-color: #f07167;} /* Green */
-		.info {background-color: #2196F3;} /* Blue */
-		.red {background-color: : #ef233c} /* Red */
-		.warning {background-color: #ff9800;} /* Orange */
-
-		hr.double {
-  			border-top: 3px double;
-  			border-bottom: none;
-		}
-
-
-    </style>
-
 </head>
+	
 <body>
 
 <div class='container'>
