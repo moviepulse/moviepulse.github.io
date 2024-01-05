@@ -69,6 +69,40 @@
   		border-top: 3px double;
   		border-bottom: none;
 	}
+
+	.center {
+  		margin: auto;
+		width: 60%;
+		border: 0px solid #73AD21;
+		padding: 10px;
+		background-color: #caf0f8;
+	}
+	.container {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	  }
+	  
+	  img {
+	    max-width: 50;
+	    max-height:50;
+	    float: left;
+	  }
+	  
+	  .text {
+	    padding-left: 20px;
+	    float: left;
+	  }
+
+	.hoverable {position: relative;}
+	.hoverable>.hoverable__tooltip {display: none;}
+	.hoverable:hover>.hoverable__tooltip {
+		  display: inline;
+		  position: absolute;
+		  top: -2.3em;
+		  color: black;
+		  left: 5em;
+	}
     </style>
 </head>
 	
