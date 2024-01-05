@@ -24,12 +24,17 @@ $ . myenv/bin/activate
 ```
 > Install Flask
 ```
-$ pip install Flask
+$ pip3 install Flask
 ```
 
 > Install the following packages: tensorflow, keras, scikit-learn, keras_retinanet, requests, matplotlib
 ```
-$ pip install tensorflow, keras, scikit-learn, keras_retinanet, requests, matplotlib
+$ pip3 install tensorflow
+$ pip3 install keras
+$ pip3 install scikit-learn
+$ pip3 install keras_retinanet
+$ pip3 install requests
+$ pip3 install matplotlib
 ```
 
 > Run your flask App under your virtual environment
