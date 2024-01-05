@@ -95,6 +95,7 @@
 </head>
 <body>
 
+
 <div id="Tabs_movie">
 	<ul>
 		<li><a href="#result_all"><span>Ideal Poster Selection</span></a></li>
@@ -102,7 +103,8 @@
 	</ul>
 	
 	<div id="result_all" >
-			<div style ="text-align:center;"><h5><label class='label info'>This App is designed to assist you in selecting the ideal poster from the two uploaded ones to maximize your box office performance.</h5></div>
+			<div style ="text-align:center;"><h5><label class='label info'>This App is designed to assist you in selecting the ideal poster from the two uploaded ones to maximize your box office performance.</h5>
+			</div>
 		
 		<form action="/" method="post" enctype="multipart/form-data">
 			<div class='formfield'>
@@ -121,8 +123,12 @@
 			<input type="file" name="input_image2" disabled="true">
 
 			</p>
+
+			
+			
 		</form>
 			<button type="submit" id="ShowResult" class='button', style='vertical-align:middle'><span>SELECT</span></button><br>
+			<!-- <button id="reloadButton">Refresh Page</button> -->
 
 			<div id="results_tab1">
 			<hr class='double'>
@@ -140,8 +146,8 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td align="center"><img  src="images/poster1-test.jpg" ></td>
-						<td align="center"><img  src="images/poster2-test.jpg" ></td>
+						<td width="300px" align="center"><img width="300px" src="Poster1.jpg" ></td>
+						<td width="300px" align="center"><img width="300px" src="Poster2.jpg" ></td>
 					</tr>
 				</tbody>
 			</table>
