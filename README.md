@@ -1,10 +1,13 @@
 ## <table cellspacing="0" cellpadding="0"><tr><td><p align="center"><img src="/images/movie.png" width="50"></td><td align='center'>MoviePulse: Feeling the Pulse in Cinema - AI-Powered Emotion Forecasting for Box Office Prediction</td><td><img src="/images/pulse.png" width="50"></p></td></tr></table>
 
-> [!TIP]
-> [Demo website](https://moviepulse.github.io/): https://moviepulse.github.io
+***
 
 > [!IMPORTANT]
-> [App website hosted by AWS](http://47.128.195.142:8080/)http://47.128.195.142:8080/
+> <img src='images/demo.png' width=50/> [Demo website](https://moviepulse.github.io/): https://moviepulse.github.io (Hosted by Github)
+>
+> <img src='images/app.svg' width=50/> [APP website](http://47.128.195.142:8080/): http://47.128.195.142:8080 (Hosted by AWS)
+
+***
 
 ### Instructions for installation and deploy this web-based APP on <u>your local computer</u>
 
@@ -23,7 +26,7 @@ $ python -m venv myenv
 
 > 2. Activate the environment
 ```
-$ . myenv/bin/activate
+$ source myenv/bin/activate
 ```
 > Install Flask
 ```
