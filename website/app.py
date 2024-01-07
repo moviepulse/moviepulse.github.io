@@ -6,11 +6,12 @@ plt.rcParams["figure.figsize"] = (5.12,3.84)
 import subprocess
 import requests
 import os,sys,re
+import numpy as np
 from numpy import dot
 from numpy.linalg import norm
 from ast import literal_eval
 
-api_key = "### PLACE YOUR GPT API KEY HERE"
+api_key = "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"
 
 #prompt
 prompt_base ="Eight different emotions exist, including Amusement, Anger, Awe, Contentment, Disgust, Excitement, Fear, and Sadness. I want to examinine what emotions above are included in a synopsis. Can you judge the synopsis by distributing a total of 100 points to each of the emotions? Please just give me scores for each emotion without explanation and use commas to separate each score. The synopsis is "
@@ -28,19 +29,21 @@ def Which_is_the_Better_poster (result_poster1, result_poster2, result_text):
     
     #poster1
     arr1 = literal_eval(result_poster1)
-    Score_poster1 = [float(i.strip())*100 for i in arr1[2].split(",")]
+    #Score_poster1 = [float(i.strip())*100 for i in arr1[2].split(",")]
+    Score_poster1 = [np.log(float(i.strip())*100+1) for i in arr1[2].split(",")]
     cos_sim1 = dot(Score_poster1, Score_text)/(norm(Score_poster1)*norm(Score_text))
     
     #poster2
     arr2 = literal_eval(result_poster2)
-    Score_poster2 = [float(i.strip())*100 for i in arr2[2].split(",")]
+    #Score_poster2 = [float(i.strip())*100 for i in arr2[2].split(",")]
+    Score_poster2 = [np.log(float(i.strip())*100+1) for i in arr2[2].split(",")]
     cos_sim2 = dot(Score_poster2, Score_text)/(norm(Score_poster2)*norm(Score_text))    
     
-    Coef_list = [0.021,-1.086,-1.767,-1.783,-3.445,-1.768,0.918,0.2,6.996,2.381,-12.658,2.872,-0.625,-18.783,8.048,4.195]
+    Coef_list = [-0.641, -1.142, -2.597, -0.992, -3.866, -1.431, 0.325, 0.340, 3.831, -2.398, -19.394, 5.826, 1.835, -23.195, 8.092, 3.444]
     
     ###Add the constant back
-    Model_result_poster1 = sum(x * y for x, y in zip(Score_poster1+Score_text, Coef_list))+(2.42*cos_sim1)+38.78
-    Model_result_poster2 = sum(x * y for x, y in zip(Score_poster2+Score_text, Coef_list))+(2.42*cos_sim2)+38.78
+    Model_result_poster1 = sum(x * y for x, y in zip(Score_poster1+Score_text, Coef_list))+(1.536*cos_sim1)-57.564
+    Model_result_poster2 = sum(x * y for x, y in zip(Score_poster2+Score_text, Coef_list))+(1.536*cos_sim2)-57.564
     
     if (Model_result_poster1>=Model_result_poster2):
         return 1
@@ -195,4 +198,4 @@ def make_prediction():
         render_template('index.html', result="Prediction Fialed. Please check your input and retry.")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8001)
