@@ -165,8 +165,8 @@ def make_prediction():
         
         #Real output
         
-        result_model1 = subprocess.run(["python", "fpn_model_predict_image1.py"], capture_output=True, text=True)
-        result_model2 = subprocess.run(["python", "fpn_model_predict_image2.py"], capture_output=True, text=True)
+        result_model1 = subprocess.run(["python", "emoPred1.py"], capture_output=True, text=True)
+        result_model2 = subprocess.run(["python", "emoPred2.py"], capture_output=True, text=True)
         
         output_lines_poster1 = result_model1.stdout.splitlines()
         output_lines_poster2 = result_model2.stdout.splitlines()
