@@ -122,7 +122,7 @@ for layer in model.layers:
 
 # training process
 model.compile(optimizer=tf.optimizers.Adam(learning_rate=0.0001), loss='categorical_crossentropy',metrics=['accuracy'])
-model = keras.models.load_model('fpn_model.tf')
+model = keras.models.load_model('model.tf')
 
 
 # prediction
